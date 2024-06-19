@@ -1,0 +1,58 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icon.png</file>
+        <file>watchlist.png</file>
+        <file>reply.png</file>
+        <file>remove.png</file>
+        <file>ban.png</file>
+        <file>vriend.png</file>
+        <file>arrow_refresh.png</file>
+        <file>resultset_previous.png</file>
+        <file>resultset_next.png</file>
+        <file>resultset_last.png</file>
+        <file>resultset_first.png</file>
+    </qresource>
+    <qresource prefix="/tpl">
+        <file>spot.tpl</file>
+        <file>comment.tpl</file>
+        <file>mobilespot.tpl</file>
+        <file>imagelistitem.tpl</file>
+        <file>imagelist.tpl</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>smileys/biggrin.gif</file>
+        <file>smileys/bloos.gif</file>
+        <file>smileys/buigen.gif</file>
+        <file>smileys/censored.gif</file>
+        <file>smileys/clown.gif</file>
+        <file>smileys/confused.gif</file>
+        <file>smileys/cool.gif</file>
+        <file>smileys/exactly.gif</file>
+        <file>smileys/frown.gif</file>
+        <file>smileys/grijns.gif</file>
+        <file>smileys/heh.gif</file>
+        <file>smileys/huh.gif</file>
+        <file>smileys/klappen.gif</file>
+        <file>smileys/knipoog.gif</file>
+        <file>smileys/kwijl.gif</file>
+        <file>smileys/lollig.gif</file>
+        <file>smileys/maf.gif</file>
+        <file>smileys/ogen.gif</file>
+        <file>smileys/oops.gif</file>
+        <file>smileys/pijl.gif</file>
+        <file>smileys/redface.gif</file>
+        <file>smileys/respekt.gif</file>
+        <file>smileys/schater.gif</file>
+        <file>smileys/shiny.gif</file>
+        <file>smileys/sleephappy.gif</file>
+        <file>smileys/smile.gif</file>
+        <file>smileys/uitroepteken.gif</file>
+        <file>smileys/vlag.gif</file>
+        <file>smileys/vraagteken.gif</file>
+        <file>smileys/wink.gif</file>
+        <file>index.html</file>
+        <file>sencha-touch.js</file>
+        <file>sencha-touch.css</file>
+        <file>spotmobile.js</file>
+    </qresource>
+</RCC>
