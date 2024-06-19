@@ -10,3 +10,4 @@ of:
 ```
 
 
+I am not responsible for maintaining this project; I am simply sharing the Spotlite code for those who are interested.
