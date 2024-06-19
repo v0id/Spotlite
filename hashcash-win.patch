@@ -1,0 +1,38 @@
+diff -u hashcash-1.22/libhc.c hashcash/libhc.c
+--- hashcash-1.22/libhc.c	2006-04-07 23:03:40.000000000 +0200
++++ hashcash/libhc.c	2011-03-11 22:30:21.922171003 +0100
+@@ -572,7 +572,7 @@
+     if ( resource && 
+ 	 !hashcash_resource_match( type, token_res, 
+ 				   resource, compile, re_err ) ) {
+-	if ( *re_err != NULL ) { 
++       if ( re_err && *re_err != NULL ) {
+ 	    return HASHCASH_REGEXP_ERROR;
+ 	} else {
+ 	    return HASHCASH_WRONG_RESOURCE;
+diff -u hashcash-1.22/sha1.h hashcash/sha1.h
+--- hashcash-1.22/sha1.h	2011-03-11 22:32:19.012171000 +0100
++++ hashcash/sha1.h	2011-03-11 22:32:32.912171001 +0100
+@@ -3,6 +3,10 @@
+ #if !defined( _sha1_h )
+ #define _sha1_h
+ 
++#if defined(WIN32)
++#include <windows.h>
++#endif
++
+ /* for size_t */
+ #include <string.h>
+ #include "types.h"
+diff -u hashcash-1.22/utct.c hashcash/utct.c
+--- hashcash-1.22/utct.c	2006-04-07 16:00:09.000000000 +0200
++++ hashcash/utct.c	2011-03-11 22:06:06.002170999 +0100
+@@ -79,7 +79,7 @@
+         sprintf( set_tz, "TZ=%s", tz );
+ 	putenv( set_tz );
+ 	free( set_tz );
+-    } else { putenv( "TZ" ); }
++    } else { putenv("TZ="); putenv( "TZ" ); }
+     return res;
+ }
+ 

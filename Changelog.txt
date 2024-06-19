@@ -1,0 +1,187 @@
+2.0.0 2011-12-01
+
+* Indien een spotter op de banlijst geplaatst wordt, en deze gebruik maakt van SN 1.8+ worden nu ook zijn spots uit het overzicht verwijderd.
+* Rechter muisknop context menu een paar pixels naar rechts verplaatst zodat men minder snel per ongeluk op de eerste optie klikt.
+* Crash bij afsluiten na mislukte poging plaatsen van reactie opgelost.
+
+1.9.9 b3 2011-11-26
+
+* "meteen tonen" instelling wordt nu correct weergegeven in instellingsscherm
+* Zoeken werkt nu ook zonder natuur
+* Upgrade vanaf oudere versie: database wordt nu geoptimaliseerd bij eerste keer opstarten (duurt iets langer)
+* Uninstaller: spotlite.conf wordt nu ook verwijderd.
+
+1.9.9 b2 2011-11-25
+
+* Mogelijkheid om meerdere spots tegelijk te selecteren en te verwijderen.
+* Plaatjesoverzicht: max. formaat uitvergroot plaatje op 400px gezet.
+* Oude spots: "&amp;lt;br /&gt;" wordt nu correct weergegeven.
+* Portable probeert nu geen oude pre-1.0.8 instellingen uit het registry te converteren
+
+1.9.9 b1 2011-11-24
+
+* Wordt nu standaard een extra skin meegeleverd. Gebaseerd op het werk van: Ypsos, foorsight, PeRKoniX, Copycat, Ep Woody, Wantos en anderen.
+* Mogelijkheid spots tijdelijk te sorteren door op een kolom in het overzicht te klikken.
+  Standaard worden spots echter niet gesorteerd i.v.m. performance.
+* Anti-spam instellingen zijn nu configurbaar.
+* Mogelijkheid om spam automatisch te verwijderen.
+* Optie om spots te rapporteren toegevoegd.
+* Optie om nieuwe spots bij het opstarten meteen te laten zien, maar daarna alleen als er op "update" wordt geklikt.
+* Uitbreidingen voor skin auteurs:
+
+in spot.tpl zijn de volgende speciale URLs toegevoegd:
+
+action:reportspot - rapporteer spot
+action:deletespot - verwijder spot
+action:reply - plaats een reactie
+
+* Ampersandjes in titel worden nu correct in tabblad weergegeven.
+* Bij plaatsen van reacties worden nu echte message-ids gebruikt om collissions te voorkomen
+  (reden dat dit in de vorige versies bewust korte id suffixes werden gebruikt was voor compatibiliteit met Spotnet 1.4, maar dat gebruikt nu niemand meer)
+* Toon foutmelding indien er tijdens het plaatsen van een reactie een fout voordoet.
+* "Filter bewerken" scherm: "ondertitels" hernoemd naar "talen en ondertitels"
+* Gebruiker-ids worden nu ook in verkort formaat weergegeven
+* Aantal extra voorbeeld filters toegevoegd (alleen te zien bij nieuwe installaties, niet bij updates)
+
+1.0.8 2011-10-30
+
+* Optie om binnenhalen spammeldingen uit te zetten (voor gebruik met providers waarbij headers free.willey ontbreken of corrupt zijn)
+* Instellingen worden nu in de database map opgeslagen i.p.v. in het register. Makkelijker te backupen.
+* Bug verwijderen oude spots opgelost.
+* Bij aanklikken "update" knop worden bestaande spots niet meer groen weergegeven.
+* Aantal genres toegevoegd.
+
+1.0.7 2011-10-02
+
+* Vaak gerapporteerde spots hebben nu een ander kleurtje in het overzicht.
+* 01z03 (natuur) komt nu onder de juiste categorie te staan
+* Plaatjes overzicht
+* Update knop instelling
+* Ctrl-w keyboard shortcut voor het sluiten van een tab
+
+1.0.6 2011-09-27
+
+* Quick fix
+* Aantal nieuwe Spotnet categorieen toegevoegd
+* Mogelijkheid om plaatjes die in de nieuwsgroep gepost zijn te downloaden, maar niet die van externe websites (#privacy)
+
+1.0.5 2011-04-02
+
+* Context menu (rechter muisknop) in spotlijst
+* Prullenbak voor verwijderde spots
+* Mac/Linux: ondersteunen nu ook .spotskin bestanden
+* Laad nu bij het opstarten meer in het geheugen. Trager opstarten, maar sneller in gebruik.
+
+1.0.4DE2 (designer edition beta 2) 2011-03-27
+
+* Tweede beta versie voor mensen die met skins willen experimenteren.
+* Bugfix: qt.css ondersteuning.
+* standaard comments.tpl template: nested <div> vervangen door ouderwetse tables i.v.m. performance bij selecteren tekst.
+* .spotskin bestandsformaat voor het makkelijk installeren van de skins geintroduceerd.
+* de breedte van de categorie kolom past zich nu aan de gebruikte icoontjes aan.
+
+1.0.4DE (designer edition) 2011-03-24:
+
+* Beta versie voor mensen die met skins willen experimenteren.
+* Database import/export functie.
+* Database instellingen geoptimaliseerd.
+* Verbreek de verbinding indien de server niet binnen 30 seconden op een commando reageert.
+* Optie om spots uit het overzicht te verwijderen.
+* Indien meerdere mensen onder dezelfde schuilnaam bij dezelfde spot reacties posten, dan wordt dit nu aangegeven (Anoniempje #2)
+
+1.0.3 2011-03-14:
+
+* Onthoud nu welke categorieen ingeklapt en uitgeklapt zijn.
+* "X-No-Archive: yes" header op reacties.
+* Spotinformatie: "venster sluiten" toegevoegd aan context menu (rechter muisknop).
+* Zoeken binnen een categorie.
+* Laat nu ook Spotnet 1.7 reacties zien.
+* Ondersteuning voor plaatjes die in de nieuwsgroep gepost zijn.
+* Bugfix: nieuwe spots in natuur subcategorie worden nu ook groen weergegeven.
+* Bugfix: Windows tijdzone probleem verholpen.
+* Mac OS X: versie nummer is nu zichtbaar in "help" -> "over Spotlite"
+* Windows: de certificaten van 124 certificate authorities worden nu meegeleverd, voor installaties waar deze niet aanwezig zijn.
+* SpotMobiel ALPHA: met je smartphone vanaf je luie bank inloggen op Spotlite, om te zien welke nieuwe spots er zijn.
+
+1.0.2 2011-03-07:
+
+* Bugfix: filters worden nu opgeslagen na het rangschikken.
+* Bugfix: probleem bij selectie van meerdere filter opties nu echt opgelost.
+* Bugfix: scrolt nu naar boven na het veranderen van de categorie/zoekopdracht.
+* Weergave voortgang bij downloaden reacties.
+
+1.0.1 2011-03-06:
+
+* Filters:
+- Probleem bij selectie van meerdere opties tegelijk opgelost.
+- Standaard filters nu aanpasbaar (op hoofdcategorieen na).
+- Rangschikken van filters.
+* Tags werken nu ook bij oudere spots.
+* Reacties geplaatst door de spotter worden nu in een andere kleur weergegeven.
+* Indien je je aan de reacties van een bepaalde gebruiker stoort kan je deze nu verbergen.
+* Bug fix: Opslaan van afbeeldingen
+* Mac OS X: (tijdelijke) ondersteuning voor Leopard Intel 32-bit dat op verouderde Mac computers draait.
+  Kan in een volgende versie weer verdwijnen omdat deze in nieuwere versies van de gebruikte ontwikkelomgeving (Qt 4.7.2) niet meer ondersteund wordt.
+* Windows: max. stack grootte verhoogd naar 8 MB (verhelpt mogelijk een crash bij gebruik van een bepaalde SSL versie)
+* Diverse kleine optimalisaties.
+
+
+1.0 Final 2011-02-28:
+
+* Beperkte ondersteuning voor het toevoegen van extra filters.
+
+1.0 RC2 2011-02-28:
+
+* Workaround voor providers die gescheiden backends hebben voor tekst- en binaries groepen, en daarvoor software gebruiken die verzuimt alle backends te proberen op het moment dat een message-id wordt opgevraagd (NNTPswitch).
+* Mocht het programma door een fout afsluiten, dan wordt er nu een een bestand genaamd crash.dmp in de databasemap aangemaakt met extra informatie die het probleem mogelijk kan verhelpen.
+* Duidelijker onderscheid nieuwe spots.
+* Natuur spots zijn nu ook doorzoekbaar.
+
+1.0 RC1 2011-02-26:
+
+* Bugfix: subcategorie verbeterd bij oude spots.
+* Bugfix: ontdubbelen van spots met speciale (Franse) tekens verbeterd.
+* Workaround: gebruik BODY ipv ARTICLE commando om bestandsnaam informatie binnen te halen.
+* Maximaal aantal binnen te halen headers verhoogd.
+
+Beta 6 2011-02-24:
+
+* Aparte "natuur" watchlist
+* Bugfix: fout bij ontdubbelen van spots verholpen.
+* Bugfix: "RSA_verify" foutmelding bij gebruik van SSL opgelost.
+* SSL ondersteund (deflate) compressie.
+* Dependency op VC90.CRT verwijderd (verhelpt mogelijk problemen die sommigen sinds beta 4 hebben.)
+
+Beta 5 2011-02-24:
+
+* Lettergrootte instelbaar.
+* Enkel/dubbelklik acties instelbaar.
+* Controleert nu slechts eens in de 119 seconden op nieuwe headers.
+* Bugfix: [/u] [/i] in berichtopmaak wordt nu correct weergegeven.
+* Bugfix: Ubuntu crasht niet meer op 32-bit systemen.
+* Bugfix: .gif/.jpg plaatjes worden nu correct weergegeven.
+
+Beta 4 2011-02-22:
+
+* Watchlist.
+* Reacties plaatsen.
+* Bugfix: ga nu verder na een "article not found" melding, i.p.v. het steeds nogmaals te proberen.
+* CTRL+C werkt.
+
+Beta 3 2011-02-18:
+
+* SSL
+* Header compressie (zoals ondersteund door Astraweb e.a.)
+* Wel of niet tonen van "natuur" categorie instelbaar.
+* Natuur verschijnt nu niet meer onder "alles", "nieuw" en bij zoekopdrachten, maar alleen in de categorie zelf.
+* Bugfix: database leeg functie verwijderd niet altijd.
+
+Beta 2 2011-02-17:
+
+* Bugfix: crash na "Usenet provider ondersteund het downloaden van headers niet".
+* Database legen optie.
+* Correctie weergave eerste en laatste bestandsnaam bij bestandsnaam.rar t/m bestandsnaam.r99.
+
+Beta 1 2011-02-17:
+
+* Eerste release

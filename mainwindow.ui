@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Spot Lite</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res/icons.qrc">
+    <normaloff>:/icons/icon.png</normaloff>:/icons/icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="topMargin">
+     <number>1</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>1</number>
+    </property>
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="childrenCollapsible">
+       <bool>false</bool>
+      </property>
+      <widget class="QFrame" name="frame">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>175</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="baseSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="leftMargin">
+         <number>1</number>
+        </property>
+        <property name="topMargin">
+         <number>1</number>
+        </property>
+        <property name="rightMargin">
+         <number>1</number>
+        </property>
+        <property name="bottomMargin">
+         <number>1</number>
+        </property>
+        <item row="2" column="0">
+         <widget class="QLineEdit" name="queryEdit"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="zoekButton">
+          <property name="text">
+           <string>Zoek</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0" colspan="2">
+         <widget class="QTreeWidget" name="treeWidget">
+          <property name="rootIsDecorated">
+           <bool>true</bool>
+          </property>
+          <property name="uniformRowHeights">
+           <bool>false</bool>
+          </property>
+          <property name="headerHidden">
+           <bool>false</bool>
+          </property>
+          <column>
+           <property name="text">
+            <string>Categorieën</string>
+           </property>
+          </column>
+          <item>
+           <property name="text">
+            <string>Nieuw</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Alles</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Watchlist</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Beeld</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Geluid</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Spelletjes</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Applicaties</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Erotiek</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>Nieuw</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Watchlist</string>
+            </property>
+           </item>
+          </item>
+          <item>
+           <property name="text">
+            <string>Prullenbak</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="2">
+         <widget class="QCheckBox" name="onlycat_checkbox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Binnen categorie zoeken</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QPushButton" name="updateButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Update</string>
+          </property>
+          <property name="icon">
+           <iconset resource="res/icons.qrc">
+            <normaloff>:/icons/arrow_refresh.png</normaloff>:/icons/arrow_refresh.png</iconset>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <property name="tabsClosable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="tab">
+        <attribute name="title">
+         <string>Nieuw</string>
+        </attribute>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QTabWidget" name="tabWidget_2">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="tabPosition">
+            <enum>QTabWidget::South</enum>
+           </property>
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="tab_2">
+            <attribute name="title">
+             <string>Lijst</string>
+            </attribute>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QTableView" name="tableView">
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                </font>
+               </property>
+               <property name="alternatingRowColors">
+                <bool>true</bool>
+               </property>
+               <property name="selectionMode">
+                <enum>QAbstractItemView::ExtendedSelection</enum>
+               </property>
+               <property name="selectionBehavior">
+                <enum>QAbstractItemView::SelectRows</enum>
+               </property>
+               <property name="showGrid">
+                <bool>false</bool>
+               </property>
+               <property name="gridStyle">
+                <enum>Qt::NoPen</enum>
+               </property>
+               <property name="sortingEnabled">
+                <bool>true</bool>
+               </property>
+               <property name="cornerButtonEnabled">
+                <bool>false</bool>
+               </property>
+               <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="verticalHeaderVisible">
+                <bool>false</bool>
+               </attribute>
+               <attribute name="verticalHeaderMinimumSectionSize">
+                <number>20</number>
+               </attribute>
+               <attribute name="verticalHeaderDefaultSectionSize">
+                <number>20</number>
+               </attribute>
+               <attribute name="verticalHeaderHighlightSections">
+                <bool>true</bool>
+               </attribute>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="tab_3">
+            <attribute name="title">
+             <string>Plaatjes</string>
+            </attribute>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="SpotImageList" name="imagelist" native="true"/>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuProgramma">
+    <property name="title">
+     <string>Programma</string>
+    </property>
+    <addaction name="actionDatabase_importeren"/>
+    <addaction name="actionDatabase_exporteren"/>
+    <addaction name="actionAfsluiten"/>
+   </widget>
+   <widget class="QMenu" name="menuOpties">
+    <property name="title">
+     <string>Opties</string>
+    </property>
+    <addaction name="actionConfiguratie"/>
+    <addaction name="actionDatabase_optimalizeren"/>
+    <addaction name="actionHeaders_verwijderen_en_opnieuw_downloaden"/>
+    <addaction name="actionGebruikersinterface_aanpassen"/>
+    <addaction name="actionAdresboek"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionOver_SpotLite"/>
+   </widget>
+   <addaction name="menuProgramma"/>
+   <addaction name="menuOpties"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionConfiguratie">
+   <property name="text">
+    <string>Configuratie</string>
+   </property>
+  </action>
+  <action name="actionAfsluiten">
+   <property name="text">
+    <string>Afsluiten</string>
+   </property>
+  </action>
+  <action name="actionOver_SpotLite">
+   <property name="text">
+    <string>Over SpotLite</string>
+   </property>
+  </action>
+  <action name="actionDatabase_optimalizeren">
+   <property name="text">
+    <string>Database optimaliseren</string>
+   </property>
+  </action>
+  <action name="actionHeaders_verwijderen_en_opnieuw_downloaden">
+   <property name="text">
+    <string>Headers verwijderen en opnieuw downloaden</string>
+   </property>
+  </action>
+  <action name="actionGebruikersinterface_aanpassen">
+   <property name="text">
+    <string>Gebruikersinterface aanpassen</string>
+   </property>
+  </action>
+  <action name="actionAdresboek">
+   <property name="text">
+    <string>Adresboek</string>
+   </property>
+  </action>
+  <action name="actionSpotMobiel">
+   <property name="text">
+    <string>SpotMobiel</string>
+   </property>
+  </action>
+  <action name="actionDatabase_importeren">
+   <property name="text">
+    <string>Database importeren</string>
+   </property>
+  </action>
+  <action name="actionDatabase_exporteren">
+   <property name="text">
+    <string>Database exporteren</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>SpotImageList</class>
+   <extends>QWidget</extends>
+   <header>spotimagelist.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="res/icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

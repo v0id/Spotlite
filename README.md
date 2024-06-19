@@ -1,7 +1,12 @@
-# Spotlite
-Spotlite source code that someone dumped
+SpotLite
+===
 
-#Te compileren in de Qt Creator IDE.
+Te compileren in de Qt Creator IDE. 
 of:
-qmake
-make
+
+```
+ qmake
+ make
+```
+
+
