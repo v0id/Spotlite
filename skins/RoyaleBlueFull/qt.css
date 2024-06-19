@@ -1,0 +1,284 @@
+/*
+Name theme:			RoyaleBlueFull v0.4
+more info qt.css:	http://doc.qt.nokia.com/latest/stylesheet-examples.html
+Autor:				Ypsos
+Date:				2011-11-17
+last modified:		2011-11-24
+
+*/
+
+/* Menu */
+QMenuBar {
+	background-color: qlineargradient(
+	x1:0, y1:0, x2:0, y2:1,
+	stop:0 darkblue, stop:1 #00004A);
+}	
+
+QMenuBar::item {
+	color: #EEEEEE;
+	spacing: 6px;
+	padding: 1px 4px;
+	background: transparent;
+	border-radius: 1px;
+}
+
+QMenuBar::item:selected {
+	color: #FFF;
+	background: #557DBC;
+}
+
+QMenuBar::item:pressed {
+     background: #40617B;
+}
+/* Menu eind */
+	
+QMainWindow { 
+	background-color: #00004A;
+	background-image: url('skins/RoyaleBlueFull/mainbg.png');
+	background-repeat: repeat;
+}
+
+/* Tabbladen */
+QTabWidget::pane {
+	background-color:#40617B;
+	margin-top:5px;
+	padding-top:-5px;
+	border: 0px none;
+    border-top: 2px solid #40617B;
+}
+
+QTabWidget::tab-bar:hover{
+	background-color:#3F92ED;
+	margin-top:5px;
+	padding-top:-5px;
+	border: 0px none;
+    border-top: 2px solid #40617B;
+}
+
+QTabWidget::tab-bar {
+    left: 2px; 
+}
+
+QTabBar::tab {
+	color: #EEEEEE;
+	border-radius: 3px;
+	border: 2px solid #4E75BA;
+	background-color: qlineargradient(
+	x1: 0, y1: 0, x2: 0, y2: 1, 
+	stop: 0 #5278B7, 
+	stop: 1 #77AFF1);
+    border: 2px solid #4E75BA;
+	border-bottom-color: #00004A; 
+    border-top-right-radius: 4px;
+    min-width: 8ex;
+    padding: 2px;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+	background: qlineargradient(
+	x1: 0, y1: 0, x2: 0, y2: 1,
+	stop: 0 #63A7F1, stop: 0.4 #86BAF4,
+	stop: 0.5 #3F92ED, stop: 1.0 #63A7F1);
+}
+ 
+QTabBar::tab:selected{
+	color: #FFF;
+	font-weight: bolder;
+	border-radius: 3px;
+	border: 2px solid #819BCD;
+	background-color: qlineargradient(
+	x1: 0, y1: 0, x2: 0, y2: 1, 
+	stop: 0 #77AFF1, stop: 1 #5278B7);
+}	
+
+QTabBar::tab:!selected {
+	margin-top: 2px;
+}
+/* Einde Tabbladen */
+
+/* Binnen categorie zoeken check*/
+#onlycat_checkbox, QToolbar {
+	color: #FFF;
+}
+
+/* categorielijst header */
+QHeaderView::section {
+	background-color: qlineargradient(
+	x1:0, y1:0, x2:0, y2:1,
+	stop: 0 #5A84C3, stop: 0.4 #5F8CCC,
+    stop: 0.5 #618ECE, stop: 1.0 #819BC4);
+	color: #FFF;
+	padding-left: 4px;
+	border-top: 1px solid #4E75BA;
+	border-left: 1px solid #4E75BA;
+	border-bottom:1px solid #163163;
+	border-right: 1px solid #4E75BA;
+	height: 20px;
+}
+
+/* categorielijst */
+#treeWidget {
+show-decoration-selected: 0; /* 1 of 0 */
+	background-color:#40617B;
+}
+
+/* cat: Beeld, Geluid, Spellen, Apps, XXX  */
+#treeWidget::item:has-children {
+  	background: qlineargradient(
+	x1: 0, y1: 0, x2: 0, y2: 1, 
+	stop: 0 #7599B7, 
+	stop: 1 #547EA0);
+	padding-left: 0px;
+	border-top: 1px solid #163163;
+	border-left: 1px solid #163163;
+	border-bottom: 1px  solid #163163;
+	border-right: 1px solid #163163;
+	border-radius: 3px;
+} 
+
+#treeWidget::item:selected:has-children{
+	selection-color:#FFF;
+	padding-left: 2px;
+	border: 1px solid #40617B;
+	border-radius: 3px;
+}
+
+#treeWidget::item:has-children:hover {
+	color: MidnightBlue;
+	border: 1px solid #163163;
+	border-radius: 3px;
+	padding-left: 2px;
+} 
+
+#treeWidget::item:selected:has-children:active{
+	background: qlineargradient(
+	x1: 0, y1: 0, x2: 0, y2: 1, 
+	stop: 0 #537C9D, 
+	stop: 1 #4D7393);
+	padding-left: 4px;
+	border-top: 1px solid #142D5A;
+	border-left: 1px solid #142D5A;
+	border-bottom: 1px  solid #142D5A;
+	border-right: 1px solid #142D5A;
+	border-radius: 3px;
+}
+
+/* subcat: DivX, WMV, MPG enz...  */
+#treeWidget::item {
+	background-color:#40617B;
+	color: #FFF;
+	padding-left: -2px;
+	height: 20px;
+}
+
+#treeWidget::item:selected {
+	selection-color:#FFF;
+	padding-left: 2px;
+}
+
+#treeWidget::item:hover {
+	color: cornflowerBlue;
+	background-color:#9BB6DD;
+	border: 1px solid #40617B;
+	padding-left: 0px;
+}
+
+#treeWidget::item:selected:active{
+	background: qlineargradient(
+	x1: 0, y1: 0, x2: 0, y2: 1, 
+	stop: 0 #7599B7, 
+	stop: 1 #547EA0);
+	border: 1px solid #40617B;
+	padding-left: 2px;
+}
+
+#treeWidget::item:selected:!active {
+	background: qlineargradient(
+	x1: 0, y1: 0, x2: 0, y2: 1, 
+	stop: 0 #6b9be8, 
+	stop: 1 #577fbf);
+}
+
+/* + teken en stippellijn */
+#treeWidget::branch {
+	border: none;
+}
+/* Einde categorielijst */
+
+/* ScrollBar */	
+/*
+QScrollBar {
+	background-color:#40617b;
+}
+*/
+
+/* Scheiding categorielijst/ hoofdscherm */
+QSplitter::handle {
+	background: #4E75BA;
+}
+
+/* Hoofdscherm */
+QTableView ::section, QTableView ::section:selected {
+	background-color: qlineargradient(
+	x1:0, y1:0, x2:0, y2:1,
+	stop: 0 #5A84C3, stop: 0.4 #5F8CCC,
+    stop: 0.5 #618ECE, stop: 1.0 #819BC4);
+	color: #FFF;
+	selection-color: #000;
+	padding-left: 2px;
+	padding-right: 4px;
+	height: 20px;
+	border-left: 1px solid #4E75BA;
+	border-bottom: 1px solid #4E75BA;       
+}	
+	
+QTableView {
+	selection-background-color: #40617B;
+	alternate-background-color:#CFDCE7;
+	background-color: #FFF;
+	selection-color: #FFF;
+	color: #000;
+}
+
+ QFrame{
+	border: 0px none;
+}
+
+/* Buttons */
+#zoekButton, #updateButton {
+	color: #EEEEEE;
+	border-radius: 3px;
+	border: 2px solid #4E75BA;
+	background-color: qlineargradient(
+	x1: 0, y1: 0, x2: 0, y2: 1, 
+	stop: 0 #5278B7, 
+	stop: 1 #77AFF1);
+}
+
+#zoekButton, #updateButton:pressed {
+	color: #FFFFFF;
+	font-weight: bolder;
+	border-radius: 3px;
+	border: 2px solid #819BCD;
+	background-color: qlineargradient(
+	x1: 0, y1: 0, x2: 0, y2: 1, 
+	stop: 0 #77AFF1, 
+	stop: 1 #5278B7);
+	min-width: 50px;
+	min-height: 15px;
+}
+
+/* zoekvak */
+#queryEdit {
+	border: 1px solid #4E75BA; 
+	border-radius: 2px;
+	padding: 0 8px;
+	background: #CFDCE7;
+	selection-background-color: #000;
+}
+
+/* Status onder updates etc. */
+#statusBar {
+	color: #FFF;
+	border: 0px none;
+}
